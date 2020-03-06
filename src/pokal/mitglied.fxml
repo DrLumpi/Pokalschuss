@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pokal.MitgliedController">
+    <HBox AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0">
+        <Label fx:id="numLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="000" textFill="#05386b">
+            <padding>
+                <Insets left="5.0" right="10.0" />
+            </padding>
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nameField" disable="true" prefWidth="200.0" promptText="Name" style="-fx-opacity: 1.0; -fx-text-inner-color: #05386b;">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </TextField>
+      <Button layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#toggleEditName" style="-fx-background-color: #339966;">
+          <HBox.margin>
+              <Insets left="5.0" right="5.0" />
+          </HBox.margin>
+         <graphic>
+             <ImageView fx:id="nameToggle" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                 <Image url="@../assets/edit.png" />
+             </ImageView>
+         </graphic>
+      </Button>
+        <TextField fx:id="scoreField" alignment="CENTER_RIGHT" disable="true" prefWidth="60.0" promptText="Wertung" style="-fx-opacity: 1.0; -fx-text-inner-color: #05386b;">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </TextField>
+        <Button mnemonicParsing="false" onMouseClicked="#toggleEdit" style="-fx-background-color: #339966;">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <graphic>
+                <ImageView fx:id="scoreToggle" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../assets/edit.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Jungschütze" textFill="#05386b">
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="youthToggle" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#toggleYouth">
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </CheckBox>
+    </HBox>
+</AnchorPane>

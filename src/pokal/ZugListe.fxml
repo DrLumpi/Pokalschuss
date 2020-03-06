@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="container" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pokal.ZugListeController">
+    <ToolBar prefHeight="40.0" prefWidth="600.0" style="-fx-background-color:  #339966;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Button onMouseClicked="#load" mnemonicParsing="false" style="-fx-background-color: #05386B;" text="Backup laden" textFill="#eeddff" />
+        <Button onMouseClicked="#save" mnemonicParsing="false" style="-fx-background-color: #05386B;">
+             <graphic>
+                 <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@/assets/save.png" />
+                 </ImageView>
+             </graphic>
+        </Button>
+        <Pane HBox.hgrow="ALWAYS" />
+        <TextField fx:id="zugName" alignment="CENTER_RIGHT" onKeyPressed="#addZugByPressingEnter" prefWidth="250.0" promptText="Name des Zugs" />
+        <Button mnemonicParsing="false" onMouseClicked="#addZug" style="-fx-background-color: #05386B;" text="+" textFill="#edf5e1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button mnemonicParsing="false" onMouseClicked="#evaluate" style="-fx-background-color: #05386B;" text="Auswerten" textFill="#edf5e1" />
+    </ToolBar>
+    <ScrollPane hbarPolicy="NEVER" layoutY="40.0" stylesheets="@/assets/scroll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <VBox fx:id="list" />
+    </ScrollPane>
+</AnchorPane>
